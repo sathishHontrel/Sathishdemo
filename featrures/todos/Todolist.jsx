@@ -2,7 +2,7 @@ import { useGetTodosQuery } from "../api/apiSlice";
 import { useState } from "react"
 
 const TodoList = () =>{
-    const [newtodo,setNewtodo] = useState('');
+    const [newtodos,setNewtodos] = useState('');
 
     const {
         data: todos,
@@ -24,9 +24,9 @@ const TodoList = () =>{
         <div className='new-todo'>
             <input type='text' 
             id='new-todo'
-            value={newtodo}
+            value={newtodos}
             placeholder='Enter a todo'
-            onChange={(e) => {setNewtodo(e.target.value)}}/>
+            onChange={(e) => {setNewtodos(e.target.value)}}/>
         </div>
         <button className="submit">
            submit
